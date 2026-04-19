@@ -1,0 +1,309 @@
+id,name,wiki,r,theta,height,color
+s1,Prakith,Prakith,36,142,42,#FFE87C
+s2,Tython,Tython,37,92,-47,#AED6F1
+s3,Byss,Byss,46,209,-38,#E8744F
+s4,Foerost,Foerost,60,75,44,#D4E6F1
+s5,N'Zoth,N'Zoth,78,133,-41,#F9E79F
+s6,Cal-Seti,Cal-Seti,78,226,36,#AED6F1
+s7,Chandrila,Chandrila,78,42,-45,#85C1E9
+s8,Coruscant,Coruscant,80,89,39,#E6B0AA
+s9,Corellia,Corellia,89,343,-37,#E8744F
+s10,Alsakan,Alsakan,92,79,48,#E8744F
+s11,Abregado-rae,Abregado-rae,103,270,4,#85C1E9
+s12,Spira,Spira,105,240,-4,#E6B0AA
+s13,Caamas,Caamas,105,54,-15,#D4E6F1
+s14,Hosnian Prime,Hosnian_Prime,106,314,1,#AED6F1
+s15,Alderaan,Alderaan,106,45,3,#F9E79F
+s16,Ralltiir,Ralltiir,106,71,11,#FFFFFF
+s17,Duro,Duro,107,331,15,#85C1E9
+s18,Kuat,Kuat,118,23,-2,#FFE87C
+s19,Borleias,Borleias,121,100,-5,#D4E6F1
+s20,Cato Neimoidia,Cato_Neimoidia,126,358,6,#AED6F1
+s21,Fondor,Fondor,128,277,-14,#E8744F
+s22,Dankayo,Dankayo,140,219,15,#D4E6F1
+s23,Phu,Phu,143,245,15,#E6B0AA
+s24,Carida,Carida,144,49,10,#D7BDE2
+s25,Arkania,Arkania,145,67,7,#FADBD8
+s26,Commenor,Commenor,148,15,-15,#E6B0AA
+s27,Balmorra,Balmorra,150,24,3,#E6B0AA
+s28,Selvaris,Selvaris,160,133,-4,#F9E79F
+s29,Bestine,Bestine,162,291,3,#FFE87C
+s30,Atzerri,Atzerri,168,318,11,#AED6F1
+s31,Jakku,Jakku,170,217,2,#E8744F
+s32,Thyferra,Thyferra,172,282,-3,#D4E6F1
+s33,Bilbringi,Bilbringi,175,108,-15,#F9E79F
+s34,Manaan,Manaan,176,356,-15,#AED6F1
+s35,Corsin,Corsin,183,82,-9,#85C1E9
+s36,Denova,Denova,195,344,-14,#E6B0AA
+s37,M4-78,M4-78,197,246,-13,#E8744F
+s38,Dorin,Dorin,199,111,12,#E8744F
+s39,Jedha,Jedha,202,192,5,#85C1E9
+s40,Yag'Dhul,Yag'Dhul,208,284,-2,#E6B0AA
+s41,Shili,Shili,210,67,3,#D4E6F1
+s42,Edan II,Edan_II,212,124,6,#AED6F1
+s43,Mimban,Mimban,216,351,5,#F9E79F
+s44,Reytha,Reytha,218,320,-2,#FFFFFF
+s45,Obroa-skai,Obroa-skai,220,51,-4,#85C1E9
+s46,Ord Mantell,Ord_Mantell,220,89,4,#FFE87C
+s47,HAPES,HAPES,228,29,0,#D4E6F1
+s48,Onderon,Onderon,232,23,7,#AED6F1
+s49,Rakata Prime,Rakata_Prime,237,186,-6,#E8744F
+s50,Derra IV,Derra_IV,238,297,4,#D4E6F1
+s51,Iridonia,Iridonia,244,101,6,#E6B0AA
+s52,Zaloriis,Zaloriis,244,265,2,#D7BDE2
+s53,Umbara,Umbara,245,17,-5,#FADBD8
+s54,Taanab,Taanab,249,35,7,#E6B0AA
+s55,Wrea,Wrea,249,160,0,#E6B0AA
+s56,Taloraan,Taloraan,252,342,-5,#F9E79F
+s57,Myrkr,Myrkr,256,53,4,#FFE87C
+s58,Kril'Dor,Kril'Dor,256,122,7,#AED6F1
+s59,Alpheridies,Alpheridies,258,321,-3,#E8744F
+s60,Giaca,Giaca,259,212,-7,#D4E6F1
+s61,Umgul,Umgul,260,235,-5,#F9E79F
+s62,Tomark ii,Tomark_ii,261,67,2,#AED6F1
+s63,Rathalay,Rathalay,263,92,6,#85C1E9
+s64,O'reen,O'reen,265,201,-4,#E6B0AA
+s65,Morcanth,Morcanth,268,192,-6,#E8744F
+s66,Ithor,Ithor,270,77,1,#E8744F
+s67,Sarvchi,Sarvchi,271,150,-7,#85C1E9
+s68,M'haeli,M'haeli,271,298,1,#E6B0AA
+s69,Waylan,Waylan,272,55,5,#D4E6F1
+s70,Takodana,Takodana,272,243,3,#AED6F1
+s71,Qat Chrystac,Qat_Chrystac,273,286,-2,#F9E79F
+s72,Ansion,Ansion,274,115,-5,#FFFFFF
+s73,Cyrilla,Cyrilla,275,332,6,#85C1E9
+s74,Kinyen,Kinyen,282,271,-1,#FFE87C
+s75,Kashyyyk,Kashyyyk,283,18,-4,#D4E6F1
+s76,Ruusan,Ruusan,283,5,-2,#AED6F1
+s77,Ord Baniir,Ord_Baniir,285,94,-7,#E8744F
+s78,Kro Var,Kro_Var,285,219,-3,#D4E6F1
+s79,Rekkiad,Rekkiad,286,127,3,#E6B0AA
+s80,Phaeda,Phaeda,286,84,-1,#D7BDE2
+s81,Mobus,Mobus,287,159,-6,#FADBD8
+s82,Vanquo,Vanquo,288,66,-5,#E6B0AA
+s83,Gamor,Gamor,291,311,-7,#E6B0AA
+s84,Taris,Taris,294,61,-2,#F9E79F
+s85,Gromas 16,Gromas_16,296,255,5,#FFE87C
+s86,Daalang,Daalang,298,354,2,#AED6F1
+s87,Panatha,Panatha,299,102,0,#E8744F
+s88,Mooga,Mooga,304,28,-4,#D4E6F1
+s89,Togoria,Togoria,306,23,2,#F9E79F
+s90,Vagar Praxut,Vagar_Praxut,307,205,-6,#AED6F1
+s91,Katarr,Katarr,307,320,-6,#85C1E9
+s92,Naporar,Naporar,308,151,-3,#E6B0AA
+s93,Jike,Jike,309,165,-7,#E8744F
+s94,Polus,Polus,310,120,4,#E8744F
+s95,Mandalore,Mandalore,311,49,-1,#85C1E9
+s96,Ilum,Ilum,311,140,-5,#E6B0AA
+s97,Kriselist,Kriselist,313,265,1,#D4E6F1
+s98,Randon,Randon,317,12,6,#AED6F1
+s99,Gannaria,Gannaria,318,223,7,#F9E79F
+s100,Mima II,Mima_II,319,334,-2,#FFFFFF
+s101,Talay,Talay,321,301,-6,#85C1E9
+s102,Zadd,Zadd,323,127,2,#FFE87C
+s103,Cerea,Cerea,324,242,5,#D4E6F1
+s104,Danuta,Danuta,324,5,6,#AED6F1
+s105,Malastare,Malastare,326,292,-3,#E8744F
+s106,Rhigar,Rhigar,327,159,-7,#D4E6F1
+s107,Pesfavri,Pesfavri,327,211,2,#E6B0AA
+s108,Osseriton,Osseriton,329,168,-5,#D7BDE2
+s109,Nyriaan,Nyriaan,331,345,1,#FADBD8
+s110,Agamar,Agamar,333,69,5,#E6B0AA
+s111,Velmor,Velmor,333,40,-4,#E6B0AA
+s112,Persappa,Persappa,333,148,7,#F9E79F
+s113,Ketaris,Ketaris,333,78,0,#FFE87C
+s114,Apatros,Apatros,336,86,-2,#AED6F1
+s115,Dathomir,Dathomir,337,57,6,#E8744F
+s116,Yaga Minor,Yaga_Minor,338,101,-4,#D4E6F1
+s117,Nirauan,Nirauan,338,113,3,#F9E79F
+s118,Kalarba,Kalarba,340,312,5,#AED6F1
+s119,Ahch-To,Ahch-To,343,218,7,#85C1E9
+s120,Haruun Kal,Haruun_Kal,343,287,-6,#E6B0AA
+s121,Esfandia,Esfandia,346,121,-1,#E8744F
+s122,Rattatak,Rattatak,347,231,4,#E8744F
+s123,Fitomp,Fitomp,349,130,-5,#85C1E9
+s124,Jebble,Jebble,352,52,2,#E6B0AA
+s125,Kaal,Kaal,353,264,-3,#D4E6F1
+s126,Durace,Durace,354,225,2,#AED6F1
+s127,Endor,Endor,356,238,-7,#F9E79F
+s128,Althir,Althir,356,46,-4,#FFFFFF
+s129,Mygeeto,Mygeeto,356,94,6,#85C1E9
+s130,Chalcedon,Chalcedon,357,252,7,#FFE87C
+s131,CSILLA,CSILLA,357,156,-2,#D4E6F1
+s132,Roche,Roche,357,34,-5,#AED6F1
+s133,Zosha,Zosha,357,136,-7,#E8744F
+s134,Aquilaris,Aquilaris,357,74,-4,#D4E6F1
+s135,Axxila,Axxila,358,64,-5,#E6B0AA
+s136,Makeb,Makeb,362,2,4,#D7BDE2
+s137,Chalacta,Chalacta,364,16,1,#FADBD8
+s138,Sullust,Sullust,367,284,7,#E6B0AA
+s139,Lannik,Lannik,368,349,3,#E6B0AA
+s140,Naboo,Naboo,369,301,4,#F9E79F
+s141,Ord Trasi,Ord_Trasi,371,86,5,#FFE87C
+s142,Niorde,Niorde,373,159,7,#AED6F1
+s143,Charros,Charros,376,28,-6,#E8744F
+s144,Falleen,Falleen,376,323,2,#D4E6F1
+s145,Bakura,Bakura,376,232,-1,#F9E79F
+s146,Ibaar,Ibaar,377,248,5,#AED6F1
+s147,Seylott,Seylott,377,148,4,#85C1E9
+s148,Belsavis,Belsavis,378,278,-3,#E6B0AA
+s149,Ando,Ando,379,319,2,#E8744F
+s150,Anteevy,Anteevy,381,37,7,#E8744F
+s151,Toydaria,Toydaria,382,358,0,#85C1E9
+s152,Monastery,Monastery,383,331,-4,#E6B0AA
+s153,Vondoru,Vondoru,385,165,1,#D4E6F1
+s154,Nanth'ri,Nanth'ri,386,343,-6,#AED6F1
+s155,Quesh,Quesh,387,11,-3,#F9E79F
+s156,Kalee,Kalee,389,107,-5,#FFFFFF
+s157,Toprawa,Toprawa,390,57,6,#85C1E9
+s158,Hilak,Hilak,390,141,-7,#FFE87C
+s159,Rhand,Rhand,392,217,1,#D4E6F1
+s160,Bothawui,Bothawui,392,335,-1,#AED6F1
+s161,Muunilinst,Muunilinst,392,97,3,#E8744F
+s162,Eriadu,Eriadu,393,283,-2,#D4E6F1
+s163,Aracara,Aracara,394,118,1,#E6B0AA
+s164,Ultaar,Ultaar,394,24,0,#D7BDE2
+s165,Bespin,Bespin,395,261,-4,#FADBD8
+s166,Stygeon Prime,Stygeon_Prime,395,39,3,#E6B0AA
+s167,Vjun,Vjun,396,43,-6,#E6B0AA
+s168,Dantooine,Dantooine,396,90,-5,#F9E79F
+s169,Nal Hutta,Nal_Hutta,398,355,7,#FFE87C
+s170,Borgo Prime,Borgo_Prime,401,71,-2,#AED6F1
+s171,Katraasii,Katraasii,401,252,-1,#E8744F
+s172,Yavin,Yavin,402,49,2,#D4E6F1
+s173,Iokath,Iokath,402,146,2,#F9E79F
+s174,Lao-mon,Lao-mon,403,155,-1,#AED6F1
+s175,Mon Gazza,Mon_Gazza,404,317,1,#85C1E9
+s176,D'Qar,D'Qar,405,299,2,#E6B0AA
+s177,Farstine,Farstine,406,309,3,#E8744F
+s178,Sarafur,Sarafur,406,272,-2,#E8744F
+s179,Hoth,Hoth,407,263,1,#85C1E9
+s180,Aeten II,Aeten_II,409,223,-2,#E6B0AA
+s181,Malata,Malata,411,130,2,#D4E6F1
+s182,Boz Pity,Boz_Pity,413,16,-2,#AED6F1
+s183,Fest,Fest,414,101,-1,#F9E79F
+s184,Serenno,Serenno,415,58,-3,#FFFFFF
+s185,Kalaan,Kalaan,417,331,1,#85C1E9
+s186,Shadda-Bi-Borah,Shadda-Bi-Borah,417,296,-2,#FFE87C
+s187,Tandun III,Tandun_III,418,113,-1,#D4E6F1
+s188,Ryoone,Ryoone,420,235,3,#AED6F1
+s189,Tulpaa,Tulpaa,425,107,2,#E8744F
+s190,Sleheyron,Sleheyron,427,9,-1,#D4E6F1
+s191,Zonju V,Zonju_V,428,241,-2,#E6B0AA
+s192,Irkalla,Irkalla,428,142,2,#D7BDE2
+s193,Nar Kreeta,Nar_Kreeta,429,4,1,#FADBD8
+s194,Darkknell,Darkknell,432,75,3,#E6B0AA
+s195,Askaj,Askaj,432,268,2,#E6B0AA
+s196,Vergesso,Vergesso,432,304,-1,#F9E79F
+s197,Nar Kaaga,Nar_Kaaga,432,349,-3,#FFE87C
+s198,Anzat,Anzat,433,27,1,#AED6F1
+s199,Griwstrick,Griwstrick,433,138,-2,#E8744F
+s200,Gree,Gree,434,88,2,#D4E6F1
+s201,Vondoru,Vondoru,434,124,-1,#F9E79F
+s202,Anoat,Anoat,435,258,3,#AED6F1
+s203,Sluis Van,Sluis_Van,436,285,1,#85C1E9
+s204,Baroonda,Baroonda,438,65,0,#E6B0AA
+s205,Varl,Varl,440,359,-2,#E8744F
+s206,Nilash,Nilash,442,250,-1,#E8744F
+s207,Bastion,Bastion,442,96,-3,#85C1E9
+s208,Lothal,Lothal,444,277,2,#E6B0AA
+s209,Odessen,Odessen,447,131,-3,#D4E6F1
+s210,Yanibar,Yanibar,448,105,-2,#AED6F1
+s211,Scarif,Scarif,448,264,1,#F9E79F
+s212,Rodia,Rodia,448,320,-2,#FFFFFF
+s213,Ord Pardron,Ord_Pardron,450,325,-1,#85C1E9
+s214,Boonta,Boonta,450,19,-2,#FFE87C
+s215,Makatak,Makatak,450,229,-3,#D4E6F1
+s216,Christophsis,Christophsis,451,318,2,#AED6F1
+s217,Socorro,Socorro,451,311,-1,#E8744F
+s218,Shola,Shola,451,121,3,#D4E6F1
+s219,Saleucami,Saleucami,451,23,-2,#E6B0AA
+s220,Artus Prime,Artus_Prime,452,60,-3,#D7BDE2
+s221,Orinackra,Orinackra,455,126,1,#FADBD8
+s222,Deralia,Deralia,457,343,2,#E6B0AA
+s223,Klatooine,Klatooine,457,15,-1,#E6B0AA
+s224,Skarpos,Skarpos,458,294,-2,#F9E79F
+s225,Lola Sayu,Lola_Sayu,458,299,3,#FFE87C
+s226,Rhen Var,Rhen_Var,458,37,-1,#AED6F1
+s227,Dagobah,Dagobah,459,282,-3,#E8744F
+s228,Galidraan,Galidraan,462,42,1,#D4E6F1
+s229,Rishi,Rishi,462,333,2,#F9E79F
+s230,Kamino,Kamino,463,336,3,#AED6F1
+s231,Plooma,Plooma,466,100,-2,#85C1E9
+s232,Roon,Roon,467,329,-1,#E6B0AA
+s233,Taspir III,Taspir_III,467,113,-1,#E8744F
+s234,Tatooine,Tatooine,468,321,-2,#E8744F
+s235,Sernpidal,Sernpidal,469,86,-3,#85C1E9
+s236,Geonosis,Geonosis,471,319,-1,#E6B0AA
+s237,Telos,Telos,472,55,-2,#D4E6F1
+s238,Ossus,Ossus,473,33,-1,#AED6F1
+s239,Mustafar,Mustafar,473,272,3,#F9E79F
+s240,Hallion,Hallion,474,49,1,#FFFFFF
+s241,Riileb,Riileb,474,354,-3,#85C1E9
+s242,Da Soocha V,Da_Soocha_V,474,3,-2,#FFE87C
+s243,Jabiim,Jabiim,475,26,2,#D4E6F1
+s244,Dosuun,Dosuun,476,250,-1,#AED6F1
+s245,Zakuul,Zakuul,476,108,-3,#E8744F
+s246,Maltha Obex,Maltha_Obex,479,72,1,#D4E6F1
+s247,Mirial,Mirial,481,52,-2,#E6B0AA
+s248,Kessel,Kessel,481,9,-2,#D7BDE2
+s249,Ylesia,Ylesia,482,357,-1,#FADBD8
+s250,Felucia,Felucia,486,37,-3,#E6B0AA
+s251,Helska,Helska,486,87,2,#E6B0AA
+s252,Arkanis,Arkanis,486,311,-1,#F9E79F
+s253,Utapau,Utapau,486,284,3,#FFE87C
+s254,Elrood,Elrood,488,280,1,#AED6F1
+s255,Honoghr,Honoghr,488,7,0,#E8744F
+s256,Korriban,Korriban,489,45,2,#D4E6F1
+s257,Peragus,Peragus,489,60,-3,#F9E79F
+s258,Yalara,Yalara,490,259,1,#AED6F1
+s259,Alashan,Alashan,490,95,2,#85C1E9
+s260,Nar Haaska,Nar_Haaska,491,0,3,#E6B0AA
+s261,Abridon,Abridon,493,22,-2,#E8744F
+s262,Zaadja,Zaadja,495,319,1,#E8744F
+s263,Hypori,Hypori,496,326,2,#85C1E9
+s264,Ziost,Ziost,498,47,-1,#E6B0AA
+s265,Jubalene,Jubalene,501,68,-2,#D4E6F1
+s266,Gamorr,Gamorr,505,343,-3,#AED6F1
+s267,Orto Plutonia,Orto_Plutonia,506,301,-1,#F9E79F
+s268,Xo,Xo,506,75,-2,#FFFFFF
+s269,Rothana,Rothana,506,338,3,#85C1E9
+s270,Dubrava,Dubrava,506,350,1,#FFE87C
+s271,Delacrix,Delacrix,507,16,-3,#D4E6F1
+s272,Orroman,Orroman,507,91,-1,#AED6F1
+s273,Polis Massa,Polis_Massa,513,277,-2,#E8744F
+s274,Arami,Arami,514,347,-1,#D4E6F1
+s275,Jaguada,Jaguada,515,41,3,#E6B0AA
+s276,Begeren,Begeren,515,57,1,#D7BDE2
+s277,Teth,Teth,517,356,-2,#FADBD8
+s278,Ryloth,Ryloth,518,318,2,#E6B0AA
+s279,Belkadan,Belkadan,519,83,1,#E6B0AA
+s280,Sy Myrth,Sy_Myrth,520,33,-3,#F9E79F
+s281,Nelvaan,Nelvaan,522,296,-1,#FFE87C
+s282,Iego,Iego,523,25,3,#AED6F1
+s283,Formos,Formos,527,7,2,#E8744F
+s284,Atollon,Atollon,528,335,-2,#D4E6F1
+s285,Olanet,Olanet,530,340,1,#F9E79F
+s286,Garel,Garel,532,12,-3,#AED6F1
+s287,Barab I,Barab_I,534,351,2,#85C1E9
+s288,Alzoc III,Alzoc_III,534,300,1,#E6B0AA
+s289,Kejim,Kejim,536,311,3,#E8744F
+s290,Kesh,Kesh,540,71,1,#E8744F
+s291,Raxus,Raxus,541,36,0,#85C1E9
+s292,Zygerria,Zygerria,542,45,-2,#E6B0AA
+s293,Arba,Arba,548,29,-1,#D4E6F1
+s294,Arbra,Arbra,550,316,-2,#AED6F1
+s295,Denova,Denova,553,332,1,#F9E79F
+s296,Malachor V,Malachor_V,554,41,-3,#FFFFFF
+s297,Eadu,Eadu,554,328,2,#85C1E9
+s298,Trigalis,Trigalis,557,14,1,#FFE87C
+s299,Salient,Salient,557,61,3,#D4E6F1
+s300,Dromund Kaas,Dromund_Kaas,562,55,-2,#AED6F1
+s301,Bosthirda,Bosthirda,563,50,3,#E8744F
+s302,Taral V,Taral_V,566,31,-1,#D4E6F1
+s303,Pzob,Pzob,567,344,-3,#E6B0AA
+s304,Tund,Tund,568,20,2,#D7BDE2
+s305,Dac,Dac,579,27,-1,#FADBD8
+s306,Kalsunor,Kalsunor,580,46,-3,#E6B0AA
+s307,Medriaas,Medriaas,585,40,-2,#E6B0AA
+s308,Targonn,Targonn,592,23,1,#F9E79F
