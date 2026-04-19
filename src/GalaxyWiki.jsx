@@ -75,11 +75,11 @@ async function fetchWikiSummary(slug) {
     return { extract, url: makeWikiUrl(slug) };
   } catch(e) {
     // If direct fetch fails, try proxy (uncomment when proxy is set up):
-    // try {
-    //   const res = await fetch("/api/wiki?slug=" + encodeURIComponent(slug));
-    //   if (!res.ok) return null;
-    //   return await res.json();
-    // } catch(e2) {}
+    try {
+    const res = await fetch("/api/wiki?slug=" + encodeURIComponent(slug));
+    if (!res.ok) return null;
+    return await res.json();
+    } catch(e2) {}
     return null;
   }
 }
