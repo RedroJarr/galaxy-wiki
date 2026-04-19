@@ -74,12 +74,12 @@ async function fetchWikiSummary(slug) {
     if (extract.length > 800) extract = extract.slice(0, 797) + "...";
     return { extract, url: makeWikiUrl(slug) };
   } catch(e) {
-    // If direct fetch fails, try proxy (uncomment when proxy is set up):
-    try {
-    const res = await fetch("/api/wiki?slug=" + encodeURIComponent(slug));
-    if (!res.ok) return null;
-    return await res.json();
-    } catch(e2) {}
+     If direct fetch fails, try proxy (uncomment when proxy is set up):
+     try {
+       const res = await fetch("/api/wiki?slug=" + encodeURIComponent(slug));
+       if (!res.ok) return null;
+       return await res.json();
+     } catch(e2) {}
     return null;
   }
 }
@@ -87,6 +87,7 @@ async function fetchWikiSummary(slug) {
 // Height limits for galactic disc shape
 function getHeightLimit(r) { if (r <= 100) return 50; if (r <= 200) return 15; if (r <= 400) return 8; return 3; }
 function clampHeight(r, h) { const l = getHeightLimit(r); return Math.max(-l, Math.min(l, h)); }
+function clampR(r) { return Math.max(1, Math.min(600, r)); }
 
 // ============================================================
 //  CHANGE TRACKING + SUBMISSION
@@ -135,7 +136,7 @@ function buildSubmissionText(changes, currentStars) {
 }
 
 // Replace with your email address
-const ADMIN_EMAIL = "redj50+sw@protonmail.com";
+const ADMIN_EMAIL = "redj50@protonmail.com";
 
 // Replace with your Formspree/Web3Forms endpoint URL when ready (optional)
 const FORM_ENDPOINT = null;
@@ -162,7 +163,7 @@ export default function GalaxyWiki() {
   const camTarget = useRef({ x:0, y:0, z:0 });
   const camGoal = useRef(null);
   const dragRef = useRef({ dragging:false, button:-1, lastX:0, lastY:0, moved:false });
-  const camState = useRef({ dist:400, az:0.3, el:0.8 });
+  const camState = useRef({ dist:800, az:0.3, el:0.8 });
 
   const [stars, setStars] = useState([]);
   const [selected, setSelected] = useState(null);
@@ -240,13 +241,13 @@ export default function GalaxyWiki() {
     const gg = new THREE.Group();
     const gm = new THREE.LineBasicMaterial({ color:0x1a2a55, transparent:true, opacity:0.35 });
     const gmb = new THREE.LineBasicMaterial({ color:0x2a3a77, transparent:true, opacity:0.5 });
-    [50,100,150,200,250,300].forEach((rad,idx) => {
+    [50,100,150,200,250,300,400,500,600].forEach((rad,idx) => {
       const pts = []; for(let i=0;i<=96;i++){const a=(i/96)*Math.PI*2;pts.push(new THREE.Vector3(Math.cos(a)*rad,0,Math.sin(a)*rad));}
       gg.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), idx%2===1?gmb:gm));
     });
-    for(let i=0;i<12;i++){const a=(i/12)*Math.PI*2;gg.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0),new THREE.Vector3(Math.cos(a)*320,0,Math.sin(a)*320)]),gm));}
-    for(let i=0;i<12;i++){const deg=i*30;const a=(deg*Math.PI)/180;const cv=document.createElement("canvas");cv.width=128;cv.height=32;const cx=cv.getContext("2d");cx.font="14px system-ui,sans-serif";cx.textAlign="center";cx.textBaseline="middle";cx.fillStyle="rgba(80,110,180,0.55)";cx.fillText(deg+"\u00B0",64,16);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthWrite:false}));sp.scale.set(16,4,1);sp.position.set(Math.cos(a)*335,1,Math.sin(a)*335);gg.add(sp);}
-    [50,100,150,200,250,300].forEach(rad=>{const cv=document.createElement("canvas");cv.width=128;cv.height=32;const cx=cv.getContext("2d");cx.font="16px system-ui,sans-serif";cx.textAlign="center";cx.textBaseline="middle";cx.fillStyle="rgba(60,90,160,0.6)";cx.fillText(String(rad),64,16);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthWrite:false}));sp.scale.set(20,5,1);sp.position.set(rad+2,1,8);gg.add(sp);});
+    for(let i=0;i<12;i++){const a=(i/12)*Math.PI*2;gg.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0),new THREE.Vector3(Math.cos(a)*650,0,Math.sin(a)*650)]),gm));}
+    for(let i=0;i<12;i++){const deg=i*30;const a=(deg*Math.PI)/180;const cv=document.createElement("canvas");cv.width=128;cv.height=32;const cx=cv.getContext("2d");cx.font="14px system-ui,sans-serif";cx.textAlign="center";cx.textBaseline="middle";cx.fillStyle="rgba(80,110,180,0.55)";cx.fillText(deg+"\u00B0",64,16);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthWrite:false}));sp.scale.set(16,4,1);sp.position.set(Math.cos(a)*670,1,Math.sin(a)*670);gg.add(sp);}
+    [50,100,150,200,250,300,400,500,600].forEach(rad=>{const cv=document.createElement("canvas");cv.width=128;cv.height=32;const cx=cv.getContext("2d");cx.font="16px system-ui,sans-serif";cx.textAlign="center";cx.textBaseline="middle";cx.fillStyle="rgba(60,90,160,0.6)";cx.fillText(String(rad),64,16);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthWrite:false}));sp.scale.set(20,5,1);sp.position.set(rad+2,1,8);gg.add(sp);});
     scene.add(gg);
 
     // Galactic centre
@@ -258,11 +259,11 @@ export default function GalaxyWiki() {
     const clc=document.createElement("canvas");clc.width=512;clc.height=64;const clx=clc.getContext("2d");clx.font="bold 26px system-ui,sans-serif";clx.textAlign="center";clx.textBaseline="middle";clx.fillStyle="rgba(0,0,0,0.4)";clx.fillText("Galactic Centre",257,34);clx.fillStyle="rgba(255,250,210,0.8)";clx.fillText("Galactic Centre",256,33);const clSp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(clc),transparent:true,depthWrite:false}));clSp.scale.set(55,7,1);clSp.position.set(0,32,0);scene.add(clSp);
 
     // Dust
-    const dGeo=new THREE.BufferGeometry();const N=3000;const dp=new Float32Array(N*3);const dc=new Float32Array(N*3);
-    for(let i=0;i<N;i++){dp[i*3]=(Math.random()-0.5)*1600;dp[i*3+1]=(Math.random()-0.5)*1600;dp[i*3+2]=(Math.random()-0.5)*1600;const b=0.15+Math.random()*0.3;dc[i*3]=b*0.6;dc[i*3+1]=b*0.65;dc[i*3+2]=b;}
+    const dGeo=new THREE.BufferGeometry();const N=4000;const dp=new Float32Array(N*3);const dc=new Float32Array(N*3);
+    for(let i=0;i<N;i++){dp[i*3]=(Math.random()-0.5)*2400;dp[i*3+1]=(Math.random()-0.5)*2400;dp[i*3+2]=(Math.random()-0.5)*2400;const b=0.15+Math.random()*0.3;dc[i*3]=b*0.6;dc[i*3+1]=b*0.65;dc[i*3+2]=b;}
     dGeo.setAttribute("position",new THREE.BufferAttribute(dp,3));dGeo.setAttribute("color",new THREE.BufferAttribute(dc,3));
     const dust=new THREE.Points(dGeo,new THREE.PointsMaterial({size:1.2,vertexColors:true,transparent:true,opacity:0.5}));scene.add(dust);
-    for(let i=0;i<6;i++){const cv=document.createElement("canvas");cv.width=128;cv.height=128;const cx=cv.getContext("2d");const g=cx.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba("+(Math.random()*60|0)+","+(Math.random()*40|0)+","+(60+Math.random()*80|0)+",0.1)");g.addColorStop(1,"rgba(0,0,0,0)");cx.fillStyle=g;cx.fillRect(0,0,128,128);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthWrite:false}));sp.position.set((Math.random()-0.5)*500,(Math.random()-0.5)*200,(Math.random()-0.5)*500);const sc=200+Math.random()*250;sp.scale.set(sc,sc,1);scene.add(sp);}
+    for(let i=0;i<8;i++){const cv=document.createElement("canvas");cv.width=128;cv.height=128;const cx=cv.getContext("2d");const g=cx.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba("+(Math.random()*60|0)+","+(Math.random()*40|0)+","+(60+Math.random()*80|0)+",0.1)");g.addColorStop(1,"rgba(0,0,0,0)");cx.fillStyle=g;cx.fillRect(0,0,128,128);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthWrite:false}));sp.position.set((Math.random()-0.5)*800,(Math.random()-0.5)*300,(Math.random()-0.5)*800);const sc=250+Math.random()*350;sp.scale.set(sc,sc,1);scene.add(sp);}
 
     buildMeshes(starsRef.current);
     applyCam();
@@ -317,7 +318,7 @@ export default function GalaxyWiki() {
   // --- ACTIONS ---
   const addStar = async () => {
     const name = formData.name || "Unnamed Star";
-    const rVal = Number(formData.r) || 100;
+    const rVal = clampR(Number(formData.r) || 100);
     const ns = { id:genId(), name, wiki:wikiSlug(name), r:rVal, theta:Number(formData.theta)||0, height:clampHeight(rVal, Number(formData.height)||0), info:"", color:formData.color };
     const all = [...starsRef.current, ns];
     saveStars(all);
@@ -349,7 +350,7 @@ export default function GalaxyWiki() {
 
   const repositionStar = () => {
     if (!selected) return;
-    const rVal = Number(formData.r);
+    const rVal = clampR(Number(formData.r));
     const all = starsRef.current.map(s => s.id===selected.id ? { ...s, r:rVal, theta:Number(formData.theta), height:clampHeight(rVal, Number(formData.height)) } : s);
     saveStars(all);
     trackChange("repositioned", selected); setChangeCount(sessionChanges.length);
@@ -364,7 +365,7 @@ export default function GalaxyWiki() {
     dbClear(); dbSave(fresh);
     starsRef.current = fresh; setStars(fresh); setSelected(null); setMode("view"); setConfirmReset(false);
     sessionChanges = []; setChangeCount(0);
-    camTarget.current={x:0,y:0,z:0}; camState.current={dist:400,az:0.3,el:0.8}; applyCam();
+    camTarget.current={x:0,y:0,z:0}; camState.current={dist:800,az:0.3,el:0.8}; applyCam();
     showToast("Galaxy reset.");
   };
 
@@ -394,7 +395,7 @@ export default function GalaxyWiki() {
   const startEdit=()=>{setFormData({name:selected.name,info:selected.info||"",color:selected.color,r:selected.r,theta:selected.theta,height:selected.height,wiki:selected.wiki||""});setMode("edit");};
   const startReposition=()=>{setFormData({...formData,r:selected.r,theta:selected.theta,height:selected.height});setMode("reposition");};
   const startAdd=()=>{setFormData({name:"",r:100,theta:Math.round(Math.random()*360),height:0,color:"#FFE87C"});setMode("add");setSelected(null);setShowSubmit(false);};
-  const goHome=()=>{camTarget.current={x:0,y:0,z:0};camState.current={dist:400,az:0.3,el:0.8};camGoal.current=null;applyCam();};
+  const goHome=()=>{camTarget.current={x:0,y:0,z:0};camState.current={dist:800,az:0.3,el:0.8};camGoal.current=null;applyCam();};
 
   const starWikiUrl=selected?makeWikiUrl(selected.wiki||wikiSlug(selected.name)):null;
 
@@ -467,7 +468,7 @@ export default function GalaxyWiki() {
               <div><label style={lbl}>&theta; (deg)</label><input style={inp} type="number" step="1" value={formData.theta} onChange={e=>setFormData(f=>({...f,theta:e.target.value}))} /></div>
               <div><label style={lbl}>h (elev)</label><input style={inp} type="number" value={formData.height} onChange={e=>setFormData(f=>({...f,height:e.target.value}))} /></div>
             </div>
-            <div style={{fontSize:10,color:"#556688",marginTop:2}}>Height limit: &plusmn;{getHeightLimit(Number(formData.r)||100)}</div>
+            <div style={{fontSize:10,color:"#556688",marginTop:2}}>Max distance: 600 &nbsp;&middot;&nbsp; Height limit: &plusmn;{getHeightLimit(Number(formData.r)||100)}</div>
             <label style={lbl}>Colour</label>
             <div style={{display:"flex",gap:5,flexWrap:"wrap",marginBottom:4}}>
               {COLORS.map(c=><div key={c} onClick={()=>setFormData(f=>({...f,color:c}))} style={{width:22,height:22,borderRadius:"50%",background:c,cursor:"pointer",border:formData.color===c?"2px solid #88aaff":"2px solid transparent",boxShadow:formData.color===c?"0 0 8px "+c:"none"}} />)}
@@ -503,7 +504,7 @@ export default function GalaxyWiki() {
               <div><label style={lbl}>&theta;</label><input style={inp} type="number" step="1" value={formData.theta} onChange={e=>setFormData(f=>({...f,theta:e.target.value}))} /></div>
               <div><label style={lbl}>h</label><input style={inp} type="number" value={formData.height} onChange={e=>setFormData(f=>({...f,height:e.target.value}))} /></div>
             </div>
-            <div style={{fontSize:10,color:"#556688",marginTop:2}}>Height limit: &plusmn;{getHeightLimit(Number(formData.r)||100)}</div>
+            <div style={{fontSize:10,color:"#556688",marginTop:2}}>Max distance: 600 &nbsp;&middot;&nbsp; Height limit: &plusmn;{getHeightLimit(Number(formData.r)||100)}</div>
             <div style={{display:"flex",gap:8,marginTop:12}}>
               <button style={btnP} onClick={repositionStar}>Apply</button>
               <button style={btn} onClick={()=>setMode("view")}>Cancel</button>
