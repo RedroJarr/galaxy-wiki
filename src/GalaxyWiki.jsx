@@ -135,7 +135,7 @@ function buildSubmissionText(changes, currentStars) {
 }
 
 // Replace with your email address
-const ADMIN_EMAIL = "your-email@example.com";
+const ADMIN_EMAIL = "redj50+sw@protonmail.com";
 
 // Replace with your Formspree/Web3Forms endpoint URL when ready (optional)
 const FORM_ENDPOINT = null;
