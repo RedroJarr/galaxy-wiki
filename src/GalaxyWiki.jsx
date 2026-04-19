@@ -74,12 +74,12 @@ async function fetchWikiSummary(slug) {
     if (extract.length > 800) extract = extract.slice(0, 797) + "...";
     return { extract, url: makeWikiUrl(slug) };
   } catch(e) {
-     If direct fetch fails, try proxy (uncomment when proxy is set up):
-     try {
-       const res = await fetch("/api/wiki?slug=" + encodeURIComponent(slug));
-       if (!res.ok) return null;
-       return await res.json();
-     } catch(e2) {}
+    // If direct fetch fails, try proxy (uncomment when proxy is set up):
+   //  try {
+    //   const res = await fetch("/api/wiki?slug=" + encodeURIComponent(slug));
+   //    if (!res.ok) return null;
+    //   return await res.json();
+   //  } catch(e2) {}
     return null;
   }
 }
@@ -136,7 +136,7 @@ function buildSubmissionText(changes, currentStars) {
 }
 
 // Replace with your email address
-const ADMIN_EMAIL = "redj50@protonmail.com";
+const ADMIN_EMAIL = "redj50+sw@protonmail.com";
 
 // Replace with your Formspree/Web3Forms endpoint URL when ready (optional)
 const FORM_ENDPOINT = null;
